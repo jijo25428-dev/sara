@@ -1339,11 +1339,17 @@ html, body {
   .avatar-hero-container {
     bottom: 104px;
     height: calc(100vh - 104px);
+    overflow: hidden;
+    z-index: 10;
   }
 
   .avatar-big {
     height: 100%;
     max-height: none;
+  }
+
+  .page-nav {
+    z-index: 1000;
   }
 }
 
