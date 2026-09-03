@@ -1353,3 +1353,27 @@ html, body {
     width: 100%;
   }
 }
+
+/* Final mobile viewport lock: the avatar must never follow page scrolling. */
+@media (max-width: 767px) {
+  .avatar-hero-container {
+    position: fixed !important;
+    inset: 0 0 auto 0 !important;
+    height: 32vh !important;
+    min-height: 200px !important;
+    max-height: 300px !important;
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  .avatar-hero-container .avatar-big {
+    height: 100% !important;
+    max-height: 100% !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .avatar-hero-container {
+    height: 30vh !important;
+    max-height: 250px !important;
+  }
+}
