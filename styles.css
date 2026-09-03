@@ -1201,7 +1201,7 @@ html, body {
   }
 
   body:not(.birthday-unlocked) .avatar-hero-container,
-  body[data-current-page]:not([data-current-page="page-home"]) .avatar-hero-container {
+  body[data-current-page]:not([data-current-page="page-home"]):not([data-current-page="page-letter"]) .avatar-hero-container {
     display: none;
   }
 
@@ -1303,7 +1303,7 @@ html, body {
   }
 
   .letter-page-content {
-    padding: 24px 12px 110px;
+    padding: calc(30vh + 12px) 12px 110px;
     overflow: hidden;
   }
 
@@ -1363,6 +1363,10 @@ html, body {
 
   #page-home .page-content.home-layout {
     padding-top: calc(30vh + 18px);
+  }
+
+  .letter-page-content {
+    padding-top: calc(28vh + 12px);
   }
 
   .name-title {
