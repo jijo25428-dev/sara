@@ -218,7 +218,7 @@ html, body {
    ========================================================================== */
 
 .avatar-hero-container {
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
   top: 0;
@@ -1338,9 +1338,9 @@ html, body {
 /* Keep the desktop avatar visually separate from the bottom navigation. */
 @media (min-width: 768px) {
   .avatar-hero-container {
-    bottom: 104px;
-    height: calc(100vh - 104px);
-    overflow: hidden;
+    bottom: 0;
+    height: 100vh;
+    overflow: visible;
     z-index: 10;
   }
 
