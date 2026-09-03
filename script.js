@@ -51,6 +51,7 @@ function initNavigation() {
   const navBtns = document.querySelectorAll('.nav-btn');
   const app = document.querySelector('.app-container');
   if (app) app.dataset.currentPage = 'page-home';
+  document.body.dataset.currentPage = 'page-home';
 
   navBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -63,6 +64,7 @@ function initNavigation() {
         targetPage.classList.add('active');
       }
       if (app) app.dataset.currentPage = targetPageId;
+      document.body.dataset.currentPage = targetPageId;
 
       // Update Active Nav Button
       navBtns.forEach(b => b.classList.remove('active'));

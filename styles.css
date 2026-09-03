@@ -1181,9 +1181,7 @@ html, body {
 
   .avatar-hero-container {
     position: fixed;
-    top: 0;
-    left: 0;
-    bottom: auto;
+    inset: 0 0 auto;
     width: 100%;
     max-width: 100%;
     height: 32vh;
@@ -1196,7 +1194,8 @@ html, body {
     margin-bottom: 0;
   }
 
-  .app-container:not([data-current-page="page-home"]) .avatar-hero-container {
+  body:not(.birthday-unlocked) .avatar-hero-container,
+  body[data-current-page]:not([data-current-page="page-home"]) .avatar-hero-container {
     display: none;
   }
 
