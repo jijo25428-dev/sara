@@ -1176,7 +1176,12 @@ html, body {
 /* Mobile Screens (portrait & small devices < 768px) */
 @media (max-width: 767px) {
   .app-container {
+    overflow: hidden;
+  }
+
+  .page {
     overflow-y: auto;
+    overscroll-behavior: contain;
   }
 
   .avatar-hero-container {
@@ -1326,6 +1331,19 @@ html, body {
 
   .photo-gallery, .games-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Keep the desktop avatar visually separate from the bottom navigation. */
+@media (min-width: 768px) {
+  .avatar-hero-container {
+    bottom: 104px;
+    height: calc(100vh - 104px);
+  }
+
+  .avatar-big {
+    height: 100%;
+    max-height: none;
   }
 }
 
