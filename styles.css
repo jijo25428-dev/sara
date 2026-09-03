@@ -1176,7 +1176,8 @@ html, body {
 /* Mobile Screens (portrait & small devices < 768px) */
 @media (max-width: 767px) {
   .app-container {
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .page {
@@ -1378,10 +1379,10 @@ html, body {
   }
 }
 
-/* Final mobile viewport lock: the avatar must never follow page scrolling. */
+/* Restore the earlier mobile top-positioned avatar behavior. */
 @media (max-width: 767px) {
   .avatar-hero-container {
-    position: fixed !important;
+    position: absolute !important;
     inset: 0 0 auto 0 !important;
     height: 32vh !important;
     min-height: 200px !important;
