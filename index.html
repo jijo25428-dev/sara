@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Happy Birthday Sangeetha | Forever My Love</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,600&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400..700,0..1,0" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section id="birthday-lock" class="birthday-lock" aria-labelledby="lock-title">
+      <div class="lock-card">
+        <div class="lock-icon material-symbols-rounded">lock</div>
+        <p class="lock-eyebrow">A private birthday surprise</p>
+        <h1 id="lock-title">For Sangeetha</h1>
+        <p class="lock-message">Enter your special date to open this little world of love.</p>
+        <form id="birthday-lock-form" class="lock-form">
+          <label for="birthday-pin">Your birthday</label>
+          <div class="pin-field">
+            <span class="material-symbols-rounded">calendar_month</span>
+            <input id="birthday-pin" type="text" inputmode="numeric" autocomplete="off" maxlength="8" placeholder="DD/MM/YY" aria-describedby="lock-error" required />
+          </div>
+          <button type="submit" class="unlock-btn">
+            <span class="material-symbols-rounded">key</span>
+            Unlock my surprise
+          </button>
+          <p id="lock-error" class="lock-error" role="alert" aria-live="polite"></p>
+        </form>
+        <span class="lock-decoration">✦ &nbsp; made with love &nbsp; ✦</span>
+      </div>
+    </section>
+
+    <!-- Canvas for Romantic Floating Sparkles & Ambient Particles -->
+    <canvas id="romantic-canvas"></canvas>
+
+    <div class="app-container">
+      <!-- GLOBAL LEFT AVATAR BACKDROP FOR ALL VIEWS / HOME -->
+      <div id="global-avatar-anchor" class="avatar-hero-container">
+        <div class="avatar-glow-ring"></div>
+        <div class="avatar-big" id="avatar-3d-wrapper">
+          <img id="avatar" src="assets/avatar.png" alt="Sangeetha" />
+          <span class="avatar-caption">
+            <span class="heart-pulse">♡</span> My Favorite Person
+          </span>
+        </div>
+      </div>
+
+      <!-- PAGE 1: HOME -->
+      <div id="page-home" class="page active">
+        <div class="page-content home-layout">
+          <!-- Right side copy & card panel -->
+          <div class="home-copy glass-card">
+            <div class="love-badge">
+              <span class="badge-sparkle">✦</span> Madam Jii Oda Birthday <span class="badge-sparkle">✦</span>
+            </div>
+            
+            <h1 class="name-title">Sangeetha</h1>
+            <p class="subtitle"><span class="title-icon">💖</span> Happy Birthday, My Gwen Stacy <span class="title-icon">💖</span></p>
+            
+            <p class="hero-message">Happy Birthday Madam jii, Love you as Always💖🫶💐, No Matter Who Leaves You Or Stay,I Won't Leave You Madam jii </p>
+
+            <div class="love-note">
+              <span class="note-mark">“</span>
+              <p>Sep 26th Intha Day Romba Special Aana Day Because This Was The Day When We Started Confessing Our Feelings For Each Other And It’s Almost Been 1 Year Since We Started Talking.</p>
+              <div class="note-signature">Forever Yours · <strong>Rakesh</strong></div>
+            </div>
+
+            <div class="romantic-details">
+              <span class="detail-pill">♡ Possessive Queen</span>
+              <span class="detail-pill">✦ Stone-Hearted Girl</span>
+              <span class="detail-pill">◇ Lub Tub Princess</span>
+            </div>
+
+            <div class="quick-actions">
+              <button id="home-heart-btn" class="romantic-action-btn primary">
+                <span class="btn-icon">💖</span> Send Love
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGE 2: LOVE MESSAGES -->
+      <div id="page-love" class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <h2>Love Notes for Sangeetha</h2>
+            <p class="section-desc">Words straight from my heart to yours...</p>
+          </div>
+          
+          <div id="love-messages-container" class="messages-container">
+            <!-- Dynamically populated -->
+          </div>
+          
+          <div class="action-row">
+            <button id="next-message" class="romantic-action-btn primary">Read Next Love Note ➜</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGE 3: GALLERY -->
+      <div id="page-gallery" class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <h2>Our Precious Moments</h2>
+            <p class="section-desc">Tap each memory box to unlock a special reason why I love you</p>
+          </div>
+
+          <div id="photo-gallery" class="photo-gallery">
+            <!-- Dynamically populated with interactive memory cards -->
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGE 4: THE LETTER -->
+      <div id="page-letter" class="page">
+        <div class="page-content letter-page-content">
+          <button id="open-letter-btn" class="letter-intro" type="button" aria-expanded="false">
+            <span class="material-symbols-rounded">mail</span>
+            <span>Open my heart</span>
+          </button>
+          <article class="letter-sheet" aria-hidden="true">
+            <img src="assets/OLD LETTER.png" alt="A vintage parchment letter" />
+            <div class="letter-copy">
+              <p class="letter-kicker">My dearest Sangeetha,</p>
+              <p>Sep 26th will always be a special day to me. It was the day we started confessing our feelings for each other, and it has almost been one beautiful year since we started talking.</p>
+              <p>From the first day I saw you, you caught my attention. But it was your character that made me fall for you. With you, I can be myself and share everything.</p>
+              <p>Happy Birthday, Madam jii. I will always choose you, celebrate you, and make you feel special.</p>
+              <p class="letter-signoff">Forever yours,<br /><strong>Rakesh</strong></p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- PAGE 5: GAMES & FUN -->
+      <div id="page-games" class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <h2>Romantic Celebration</h2>
+            <p class="section-desc">Interactive surprises made just for you!</p>
+          </div>
+
+          <div class="games-grid">
+            <button id="heart-rain-btn" class="game-btn">
+              <span class="emoji">💖</span>
+              <span class="game-title">Heart Rain</span>
+              <span class="game-desc">Shower of falling hearts</span>
+            </button>
+            <button id="confetti-btn" class="game-btn">
+              <span class="emoji">✨</span>
+              <span class="game-title">Gold Confetti</span>
+              <span class="game-desc">Sparkling birthday celebration</span>
+            </button>
+            <button id="memory-game-btn" class="game-btn">
+              <span class="emoji">💎</span>
+              <span class="game-title">Love Trivia</span>
+              <span class="game-desc">Discover cute love facts</span>
+            </button>
+            <button id="dance-mode-btn" class="game-btn">
+              <span class="emoji">🌹</span>
+              <span class="game-title">Romantic Aura</span>
+              <span class="game-desc">Glow & heartbeat mode</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- GLOBAL GLASS NAVIGATION BAR -->
+      <nav class="page-nav">
+        <button class="nav-btn active" data-page="page-home" title="Home">
+          <span class="material-symbols-rounded">home</span>
+          <span class="nav-label">Home</span>
+        </button>
+        <button class="nav-btn" data-page="page-love" title="Love Messages">
+          <span class="material-symbols-rounded">favorite</span>
+          <span class="nav-label">Love</span>
+        </button>
+        <button class="nav-btn" data-page="page-gallery" title="Gallery">
+          <span class="material-symbols-rounded">photo_library</span>
+          <span class="nav-label">Moments</span>
+        </button>
+        <button class="nav-btn letter-nav-btn" data-page="page-letter" title="My Letter">
+          <span class="letter-seal"><span class="material-symbols-rounded">mail</span></span>
+          <span class="nav-label">Letter</span>
+        </button>
+        <button class="nav-btn" data-page="page-games" title="Fun">
+          <span class="material-symbols-rounded">celebration</span>
+          <span class="nav-label">Fun</span>
+        </button>
+      </nav>
+
+      <!-- Floating Ambient Hearts -->
+      <div class="floating-hearts" id="floating-hearts-layer">
+        <div class="float-heart">💖</div>
+        <div class="float-heart">💕</div>
+        <div class="float-heart">✨</div>
+        <div class="float-heart">🌹</div>
+        <div class="float-heart">💗</div>
+      </div>
+    </div>
+
+    <!-- Modal for Special Messages / Trivia -->
+    <div id="romantic-modal" class="modal-overlay">
+      <div class="modal-card glass-card">
+        <button id="modal-close" class="modal-close-btn">&times;</button>
+        <div id="modal-content" class="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
