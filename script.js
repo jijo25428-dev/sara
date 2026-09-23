@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLoveMessages();
   initGallery();
   initGames();
-  initLetterReveal();
+  initMemoryVideo();
   initAudioSynthesizer();
   initModal();
 });
@@ -66,6 +66,15 @@ function initNavigation() {
       if (app) app.dataset.currentPage = targetPageId;
       document.body.dataset.currentPage = targetPageId;
 
+      if (targetPageId === 'page-letter') {
+        const memoryVideo = document.getElementById('memory-video');
+        if (memoryVideo) {
+          memoryVideo.currentTime = 0;
+          memoryVideo.classList.remove('memory-video-finished');
+          memoryVideo.play().catch(() => {});
+        }
+      }
+
       // Update Active Nav Button
       navBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
@@ -75,17 +84,13 @@ function initNavigation() {
   });
 }
 
-// ==================== PAGE 4: LETTER REVEAL ====================
-function initLetterReveal() {
-  const openButton = document.getElementById('open-letter-btn');
-  const letter = document.querySelector('.letter-sheet');
-  if (!openButton || !letter) return;
+// ==================== LIVING MEMORY VIDEO ====================
+function initMemoryVideo() {
+  const video = document.getElementById('memory-video');
+  if (!video) return;
 
-  openButton.addEventListener('click', () => {
-    const isOpen = letter.classList.toggle('letter-open');
-    openButton.setAttribute('aria-expanded', String(isOpen));
-    letter.setAttribute('aria-hidden', String(!isOpen));
-    openButton.querySelector('.material-symbols-rounded').textContent = isOpen ? 'drafts' : 'mail';
+  video.addEventListener('ended', () => {
+    video.classList.add('memory-video-finished');
   });
 }
 

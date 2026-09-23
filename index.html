@@ -116,23 +116,31 @@
         </div>
       </div>
 
-      <!-- PAGE 4: THE LETTER -->
+      <!-- PAGE 4: LIVING MEMORY -->
       <div id="page-letter" class="page">
-        <div class="page-content letter-page-content">
-          <button id="open-letter-btn" class="letter-intro" type="button" aria-expanded="false">
-            <span class="material-symbols-rounded">mail</span>
-            <span>Open my heart</span>
-          </button>
-          <article class="letter-sheet" aria-hidden="true">
-            <img src="assets/OLD LETTER.png" alt="A vintage parchment letter" />
-            <div class="letter-copy">
-              <p class="letter-kicker">My dearest Sangeetha,</p>
-              <p>Sep 26th will always be a special day to me. It was the day we started confessing our feelings for each other, and it has almost been one beautiful year since we started talking.</p>
-              <p>From the first day I saw you, you caught my attention. But it was your character that made me fall for you. With you, I can be myself and share everything.</p>
-              <p>Happy Birthday, Madam jii. I will always choose you, celebrate you, and make you feel special.</p>
-              <p class="letter-signoff">Forever yours,<br /><strong>Rakesh</strong></p>
+        <div class="page-content memory-page-content">
+          <div class="memory-heading">
+            <span class="memory-kicker"><span class="material-symbols-rounded">auto_awesome</span> A little moment for you</span>
+            <h2>Some feelings move<br /><em>without words.</em></h2>
+            <p>Press play in your heart and let this memory unfold.</p>
+          </div>
+          <div class="memory-stage" aria-label="An animated memory of opening a love letter">
+            <div class="memory-orbit orbit-one"></div>
+            <div class="memory-orbit orbit-two"></div>
+            <div class="memory-video-wrap">
+              <video id="memory-video" class="memory-video" autoplay muted playsinline preload="auto" aria-label="Animated envelope opening to reveal a letter">
+                <source src="assets/Hands_opening_vintage_envelope_20260916231455.mp4" type="video/mp4" />
+              </video>
+              <div class="memory-video-wash"></div>
+              <span class="memory-spark spark-one">✦</span>
+              <span class="memory-spark spark-two">✧</span>
+              <span class="memory-spark spark-three">♡</span>
             </div>
-          </article>
+            <div class="memory-caption">
+              <span class="material-symbols-rounded">favorite</span>
+              <span>For every beautiful chapter ahead</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -183,9 +191,9 @@
           <span class="material-symbols-rounded">photo_library</span>
           <span class="nav-label">Moments</span>
         </button>
-        <button class="nav-btn letter-nav-btn" data-page="page-letter" title="My Letter">
-          <span class="letter-seal"><span class="material-symbols-rounded">mail</span></span>
-          <span class="nav-label">Letter</span>
+        <button class="nav-btn letter-nav-btn" data-page="page-letter" title="Living Memory">
+          <span class="letter-seal"><span class="material-symbols-rounded">auto_awesome</span></span>
+          <span class="nav-label">Memory</span>
         </button>
         <button class="nav-btn" data-page="page-games" title="Fun">
           <span class="material-symbols-rounded">celebration</span>
