@@ -27,7 +27,7 @@ function initBirthdayLock() {
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    const isCorrect = pinInput.value.trim() === '26/09/05';
+    const isCorrect = pinInput.value.trim() === '26/09/05' || '26.09.05';
 
     if (!isCorrect) {
       error.textContent = 'That date is not quite right. Try again, birthday girl.';
